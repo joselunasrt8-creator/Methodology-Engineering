@@ -1,397 +1,255 @@
 # Methodology Engineering
 
-> **Status:** Minimum Methodology-Engineering Contract v0.1
-
-## Methodology Engineering Overview
-
-This visual overview introduces the purpose, lifecycle, engineering principles, ecosystem position, and long-term vision of the Methodology Engineering repository.
-
-### Methodology Engineering
-
-![Research Methodology](assets/slides/slide-01-research-methodology.png?raw=1)
-
-### Methodology Lifecycle
-
-![Methodology Lifecycle](assets/slides/slide-02-methodology-lifecycle.png?raw=1)
-
-### Why Methodology Engineering Matters
-
-![Why Methodology Engineering Matters](assets/slides/slide-03-why-methodology-matters.png?raw=1)
-
-### Where Methodology Engineering Fits
-
-![Continufy Research Pipeline](assets/slides/slide-04-research-pipeline.png?raw=1)
-
-### Long-Term Vision
-
-![Long-Term Vision](assets/slides/slide-05-long-term-vision.png?raw=1)
+> **Status:** Minimum Methodology-Engineering Contract v0.1  
+> **Validation status:** Candidate engineering discipline with bounded reference specializations; general cross-domain value not yet established
 
 ## Purpose
 
-This repository develops the principles, object models, transformation contracts, and scientific instruments for engineering reproducible methodologies.
+Methodology Engineering develops explicit, versioned definitions for methodologies: the object types, transformation contracts, evidence requirements, verification rules, provenance, uncertainty, lifecycle, and failure semantics under which a class of executions may be performed and evaluated.
 
-Its central determination is:
+Its current governing question is:
 
-> **A methodology is a normative object transformation system.**
+> **Can methodology definitions be engineered as explicit reusable objects in a way that improves reproducibility, traceability, controlled evolution, or evaluation compared with strong domain-native methodology practices?**
 
-A methodology defines which objects exist, how they may be transformed, what evidence and rules each transformation requires, how outputs are verified, and how provenance, uncertainty, and failure are preserved.
-
-Research methodology is the first reference specialization developed within this repository.
-
-This repository does not conduct research or execute methodologies itself.
-
-## What is Methodology Engineering?
-
-Methodology Engineering is the discipline of designing, validating, and evolving methodologies that systematically transform complex reality into reproducible evidence, validated understanding, and better decisions.
-
-It provides the object models, transformation contracts, scientific instruments, lifecycle rules, and verification principles required to build reusable methodologies without collapsing methodology definition into methodology execution.
-
-## Governing Question
-
-> **How should methodologies be engineered to systematically transform complex reality into reproducible evidence, validated understanding, and better decisions?**
-
-## Canonical Methodology-Engineering Contract
-
-This repository now defines the **Minimum Methodology-Engineering Contract v0.1** as its first canonical documentation for methodology engineering. The canonical contract is maintained in [Methodology Engineering Canon](METHODOLOGY_ENGINEERING_CANON.md).
-
-The contract explains how reusable research methodologies and scientific instruments are defined, versioned, reviewed, executed, calibrated, improved, and superseded without executing any particular study. It also establishes the required distinction ledger, minimum methodology object, methodology lifecycle, instrument lifecycle, repository boundary, known limitations, and explicit non-goals.
-
-This repository also defines the **Cross-Domain Structology Transfer Audit v0.1** as a named methodology definition maintained in [Cross-Domain Structology Transfer Audit v0.1](CROSS_DOMAIN_STRUCTOLOGY_TRANSFER_AUDIT_V0_1.md). The audit definition specializes the generic contract for transfer assessment methodology only; it does not execute the audit or produce empirical findings.
-
-Residual methodology-conformance outcomes, negative-capability and interaction boundaries, and non-mutating cross-registry reconciliation are defined in the [Residual Conformance, Negative Capability, and Reconciliation Contract v1.0](RESIDUAL_CONFORMANCE_NEGATIVE_CAPABILITY_AND_RECONCILIATION_CONTRACT_V1_0.md). That contract does not authorize execution, repair, synchronization, or scientific claims.
-
-Residual generic evidence objects, lifecycle transitions, admissibility and sufficiency, projections, validated emission, and evidence-specific cross-repository conformance are defined in the [Residual Generic Evidence Lifecycle and Conformance Contract v1.0](RESIDUAL_GENERIC_EVIDENCE_LIFECYCLE_AND_CONFORMANCE_CONTRACT_V1_0.md). This repository owns only that reusable definition; concrete evidence and executions remain in their investigation or evidence repositories.
-
-## General Model
+The repository proposes a formal answer. It does not yet establish that this representation is necessary, minimal, superior, or transferable across methodology domains.
 
 ```text
-Complex Reality
-        ↓
+Methodology definition ≠ execution
+Contract completeness ≠ scientific validity
+Verification ≠ scientific warrant
+Reusable vocabulary ≠ proven cross-domain discipline
+More structure ≠ better methodology by default
+```
+
+Research methodology is the first reference specialization.
+
+## Core candidate model
+
+The repository's central candidate determination is:
+
+> **A methodology can be represented as a normative object-transformation system.**
+
+Under this model, a methodology declares which object types exist, which transformations are admissible, what inputs/evidence they require, what outputs they produce, what invariants and uncertainty must be preserved, how results are verified, and how failure/provenance are recorded.
+
+This is a modeling and engineering proposition. Whether every useful methodology should be represented this way is an empirical question.
+
+```text
 Objects
-        ↓
-Methodology
-Defines valid transformations
-        ↓
+    ↓ governed by
+Methodology definition
+    ↓ instantiated by
 Execution
-Applies transformations
-        ↓
-Evidence
-        ↓
-Understanding
-        ↓
-Decision
+    ↓ produces
+Concrete objects / evidence
+    ↓ evaluated by
+Declared verification
 ```
 
-Research methodology is the first specialization of this general methodology-engineering model.
+## Canonical contract
 
-## Research Methodology Specialization
+The **Minimum Methodology-Engineering Contract v0.1** is maintained in [METHODOLOGY_ENGINEERING_CANON.md](METHODOLOGY_ENGINEERING_CANON.md).
+
+It defines the repository's current candidate contract for methodology identity, object definitions, transformation contracts, lifecycle, instrument lifecycle, provenance, verification, failure, versioning, and supersession.
+
+The contract is normative within this repository version. It is not evidence that the contract is complete or optimal for external methodology domains.
+
+## Reference specialization
+
+Research methodology is the first bounded specialization. It may define types such as:
+
+- Research Request;
+- Investigation Protocol;
+- Observation Record;
+- Evidence Item;
+- Instrument;
+- Calibration Record;
+- Collection Run;
+- Analysis/Transformation Record;
+- Decision Record;
+- Finding;
+- Replication Attempt;
+- Verification Result; and
+- Publication Record.
+
+These are type definitions. A specific investigation produces concrete instances.
+
+The repository also contains named contracts such as the **Cross-Domain Structology Transfer Audit v0.1** and residual conformance/evidence lifecycle contracts. Their presence demonstrates that the generic framework can be specialized on paper; it does not establish that those specializations are empirically valid or useful until executed and evaluated independently.
+
+## Methodology versus execution
 
 ```text
-Research Need
-        ↓
-Research Request
-        ↓
-Investigation Protocol
-        ↓
-Observations
-        ↓
-Evidence
-        ↓
-Analysis
-        ↓
-Decision
-        ↓
-Finding
-        ↓
-Publication
+Object Type ≠ Object Instance
+Methodology ≠ Execution
+Transformation Contract ≠ Transformation Event
+Transformation ≠ Verification
+Verification ≠ Scientific Warrant
+Evidence ≠ Decision
+Publication ≠ Canonical Evidence
 ```
 
-This sequence is not merely a workflow. Each step represents a typed object transformation governed by declared rules.
+Methodology Engineering owns reusable definitions. Execution repositories own concrete transformation events, observations, evidence, deviations, and outcomes.
 
-## Object, Methodology, and Execution
+A complete-looking methodology definition is therefore not evidence that the methodology works.
 
-```text
-Object
-≠
-Execution
-```
+## What must be measured
 
-An object represents a bounded state or artifact.
+Claims that Methodology Engineering improves research or other methodology domains require operational outcomes. Depending on the domain, useful measures may include:
 
-Execution is an activity or event that creates, consumes, or transforms concrete object instances.
+- reproducibility or replication success;
+- protocol ambiguity detected before execution;
+- undocumented deviations;
+- provenance completeness;
+- evaluator agreement;
+- missing-data handling;
+- time/cost to define and execute a methodology;
+- defect or amendment rate;
+- ability to reproduce an analysis from frozen artifacts;
+- transfer to a second independent methodology domain; and
+- downstream decision quality where an appropriate ground truth exists.
 
-Methodology Engineering defines the transformation contract:
+No single metric establishes general methodology quality.
 
-```text
-Object
-        ↓
-Methodology
-Defines valid transformations
-        ↓
-Execution
-Applies a transformation
-        ↓
-New Object
-```
+## Evidence currently supported
+
+The repository currently supports bounded claims that:
+
+- a methodology can be documented using the proposed object/transformation vocabulary;
+- reusable methodology contracts can be versioned separately from executions;
+- research methodology can be expressed as a reference specialization;
+- named instruments/contracts can be defined without performing their executions; and
+- methodology-definition artifacts can preserve explicit distinctions, provenance requirements, failure semantics, and lifecycle rules.
+
+These are representation and engineering-mechanism claims.
+
+## Claims not yet established
+
+The repository does not currently establish that:
+
+- methodology engineering is a distinct general discipline rather than a useful documentation architecture;
+- the Minimum Contract contains the minimum necessary fields;
+- the proposed object model is superior to preregistration templates, workflow specifications, scientific workflow systems, protocol standards, or domain-native methods;
+- formalized transformation contracts increase reproducibility;
+- additional structure reduces scientific error;
+- the framework transfers naturally beyond research methodology;
+- external researchers or engineers will adopt or retain it;
+- the framework improves decision quality; or
+- the complexity introduced is justified by measurable benefit.
+
+## Relationship to Structology
+
+Structology supplies a provisional candidate structural vocabulary. Methodology Engineering may specialize concepts from it, but Structology is itself unvalidated.
 
 Therefore:
 
 ```text
-Methodology
-≠
-Execution
+Structology candidate concept
+        ↓ specialization
+Methodology Engineering concept
 ```
 
+does not imply:
+
 ```text
-Transformation Contract
-≠
-Transformation Event
+Structology validated
+or
+Methodology Engineering validated
 ```
 
-## Research Transformation Contract
+Methodology Engineering should remain intelligible and testable on its own. If Structology concepts are later rejected or revised, methodology-engineering evidence should remain interpretable through versioned provenance rather than being retroactively invalidated by ecosystem dependency.
 
-Every valid research transformation should define:
+## Relationship to research execution
 
-```text
-Research Transformation {
-  source object type
-  admissible source state
-  required inputs
-  governing rule
-  operation
-  target object type
-  resulting state
-  preserved invariants
-  permitted changes
-  verification
-  provenance
-  uncertainty
-  failure modes
-  responsible roles
-}
-```
-
-A transformation is valid only when its required inputs exist, its governing rule applies, its provenance resolves, its uncertainty is preserved, and its output satisfies the declared contract.
-
-## First-Class Methodology Objects
-
-Every first-class methodology object should have a consistent shape:
+A methodology definition specifies reusable contracts. A research execution instantiates those contracts against concrete questions, sources, observations, and evidence.
 
 ```text
-Methodology Object {
-  identity
-  type
-  purpose
-  inputs
-  outputs
-  lifecycle
-  relationships
-  version
-  provenance
-  uncertainty
-  verification
-  failure state
-}
-```
-
-Research-specific object types include:
-
-- Research Request
-- Investigation Protocol
-- Observation Record
-- Evidence Item
-- Instrument
-- Calibration Record
-- Collection Run
-- Transformation or Analysis Record
-- Decision Record
-- Finding
-- Replication Attempt
-- Verification Result
-- Publication Record
-
-These are type definitions. A specific investigation produces concrete instances.
-
-## Current Scope
-
-- Methodology object systems
-- Methodology lifecycle engineering
-- Transformation contracts
-- Methodology specialization
-- Scientific instrument design
-- Research-object definitions
-- Investigation lifecycle and stage gates
-- Evidence planning and admissibility
-- Observation, derivation, measurement, and analysis boundaries
-- Decision rules and adjudication
-- Scientific instrument interfaces
-- Calibration and improvement
-- Replication and reproduction
-- Verification and conformance
-- Provenance, traceability, and lineage
-- Missingness, uncertainty, and limitations
-- Publication and transfer boundaries
-- Failure, deviation, withdrawal, and supersession semantics
-
-## Non-Scope
-
-This repository does not contain:
-
-- empirical study executions;
-- methodology executions;
-- investigation-specific evidence;
-- Cross-Domain Structology Transfer Audit executions or any other domain-specific instrument execution;
-- domain-specific methodologies except as bounded reference specializations;
-- domain-specific research protocols;
-- evidence models for specific studies;
-- schemas, validators, runtime behavior, or methodology compilers;
-- formal domain theory;
-- deterministic analysis engines;
-- operational execution systems;
-- domain-specific research conclusions;
-- authority to accept scientific claims;
-- runtime object mutation;
-- modifications to Structology.
-
-Those artifacts remain in their respective repositories and executions.
-
-## Methodology Engineering and Structology
-
-Structology defines domain-neutral structural primitives.
-
-Methodology Engineering specializes those primitives into methodology and instrument contracts. Research methodology is the first reference specialization.
-
-```text
-Structology
-Objects, stages, relations, transformations,
-verification, provenance, and failure
+Methodology definition
         ↓
-Methodology Engineering
-Methodology and instrument contracts
+Frozen investigation protocol
         ↓
-Research Methodology
-Research-specific transformation contracts
+Concrete execution
         ↓
-Architectural Boundary Research
-Investigation-specific executions, evidence, assessments, and findings
+Evidence / analysis / finding
 ```
 
-Methodology Engineering must not redefine domain-neutral structure as though it were unique to methodology or research.
+The execution may reveal that the methodology definition was incomplete or harmful. Such a result should be recorded as evidence for revision, not silently repaired in the historical methodology version.
 
-## Relationship to Research Execution
+## Relationship to the Continufy ecosystem
 
-Methodology Engineering defines types and valid transformations.
-
-Research execution creates instances and performs transformations under the research methodology specialization.
-
-For example:
+The repositories have separable responsibilities. A useful current map is:
 
 ```text
-Research Methodology
-Defines Observation Record
-        ↓
-Investigation
-Creates BOR-001
+MindShift              candidate cognition / research questions
+Structology            candidate general structural vocabulary
+Methodology Engineering reusable methodology/instrument contracts
+ABR                    empirical investigation and evidence
+Structural Foundations bounded formal theory
+SYNAPSE                deterministic structural analysis
+ContinuityOS           legitimacy / execution-boundary mechanisms
 ```
 
-```text
-Research Methodology
-Defines Evidence-to-Analysis transformation
-        ↓
-Investigation
-Executes one analysis over frozen evidence
-```
+No arrow in the ecosystem creates scientific validity, authority, or a mandatory dependency. Each handoff must justify the semantics of the artifact being consumed.
 
-A completed object or transformation instance is evidence of execution. A methodology definition alone is not.
+## Evaluation program
 
-## Relationship to the Continufy Ecosystem
+The highest-value next work is comparative execution rather than further expansion of the generic contract.
 
-```text
-Structology
-Defines domain-neutral structure
-        ↓
-Methodology Engineering
-Defines methodology transformation contracts
-        ↓
-MindShift
-Produces candidate abstractions and research requests
-        ↓
-Architectural Boundary Research
-Executes empirical investigations
-        ↓
-Structural Analysis Foundations
-Produces formal theory
-        ↓
-SYNAPSE
-Produces deterministic structural evidence
-```
+Priority experiments are:
 
-ContinuityOS remains outside the scientific-method execution path. It governs execution legitimacy where mutation-capable actions require authorization.
+1. **Research-method baseline comparison** — run the same bounded investigation using the Methodology Engineering representation and a strong conventional preregistration/protocol baseline.
+2. **Prospective defect detection** — measure whether explicit transformation contracts catch ambiguities, missing inputs, or invalid transitions before execution.
+3. **Reproduction test** — give frozen artifacts to an independent executor and measure whether they can reproduce the declared transformation/results.
+4. **Amendment discipline** — introduce an unexpected condition and compare how clearly each approach records deviations, amendments, and claim changes.
+5. **Second-domain transfer** — specialize the frozen generic contract to a non-research methodology domain without changing foundational meanings after seeing the domain.
+6. **Complexity accounting** — measure authoring time, execution overhead, artifact volume, and reviewer burden against any observed benefit.
 
-Each repository owns a distinct transformation and produces a distinct class of artifact.
+Each experiment should prospectively define the comparator, outcome measures, stopping rules, evidence identities, and permitted claims.
 
-## Boundary Principles
+## Falsification boundary
 
-```text
-Methodology
-≠
-Execution
-```
+Methodology Engineering should be narrowed, simplified, or rejected as a general discipline if evidence shows that:
 
-```text
-Object Type
-≠
-Object Instance
-```
+- strong existing methodology practices achieve equivalent outcomes with less complexity;
+- the object/transformation representation does not improve reproducibility or traceability;
+- the framework creates documentation burden without consequential benefit;
+- independent executors cannot use the contracts consistently;
+- foundational meanings must change materially across domains;
+- research-specific concepts were incorrectly generalized as methodology primitives; or
+- observed improvements are attributable only to additional documentation effort rather than the proposed architecture.
 
-```text
-Analyst Activity
-≠
-Object Transformation
-```
+Negative results are valid methodology-engineering evidence.
 
-```text
-Transformation
-≠
-Verification
-```
+## Scope
 
-```text
-Verification
-≠
-Scientific Warrant
-```
+This repository owns:
 
-```text
-Evidence
-≠
-Decision
-```
+- methodology object models;
+- methodology lifecycle engineering;
+- transformation-contract definitions;
+- methodology specialization rules;
+- scientific instrument definitions;
+- evidence/admissibility planning abstractions;
+- verification/conformance definitions;
+- provenance, traceability, uncertainty, failure, deviation, withdrawal, and supersession semantics; and
+- reusable contracts that remain separate from concrete executions.
 
-```text
-Publication
-≠
-Canonical Evidence
-```
+## Non-scope
 
-This repository defines how reproducible methodologies may be structured. It does not conduct, formalize, implement, operationalize, or authorize domain executions itself.
+This repository does not:
 
-## Current Status
+- conduct empirical studies;
+- execute methodologies;
+- contain investigation-specific evidence as canonical methodology evidence;
+- authorize scientific claims;
+- grant execution authority;
+- establish formal domain theory;
+- implement deterministic structural-analysis engines;
+- mutate external systems;
+- prove Structology;
+- prove its own generality through internal specialization; or
+- treat contract conformance as proof of scientific truth.
 
-This repository defines the architectural boundary for Methodology Engineering while the discipline continues to emerge through reference specializations and active investigations.
+## Current conclusion
 
-Research methodology is the first reference specialization. Additional methodology domains should be introduced only when reusable methodology-engineering patterns are supported by repeated execution evidence.
+Methodology Engineering now contains a substantial candidate architecture for treating methodology definitions as explicit, reusable, versioned transformation systems. Its strongest supported claim is that this representation can be specified coherently and specialized into research-method contracts.
 
-Content should be promoted here only when it is reusable across multiple methodology or research domains and no longer belongs exclusively to `architecturalboundary-research` or another domain-specific repository.
-
-## Historical Methodology Completeness Audit
-
-`METHODOLOGY_COMPLETENESS_AUDIT.md` records an assessment performed on
-2026-07-17 against repository baseline `f1a3b3e`.
-
-The audit identifies the information, rules, transformations, and artifacts that
-were missing or underspecified at that historical baseline. Its findings are
-preserved as audit evidence and are not the current repository completeness
-determination.
-
-See [Methodology Completeness Audit](METHODOLOGY_COMPLETENESS_AUDIT.md).
+The next claim to earn is consequential value: whether the architecture measurably improves reproducibility, traceability, defect detection, controlled evolution, or transfer relative to strong simpler baselines.
